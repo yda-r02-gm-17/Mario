@@ -16,8 +16,6 @@ var keyCode;
 var p;
 var bg;
 
-var pl = new Array();
-
 function init()
 {
   Data.LOAD();
