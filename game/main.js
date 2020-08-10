@@ -95,7 +95,7 @@ function getFilenameFromPath(path)
 
 function getImageFromGitHub(name)
 {
-  return "https://raw.githubusercontent.com/yda-r02-gm-17/TestGameForSF/master/res/img/" + name + "?" + new Date().getTime();
+  return "https://raw.githubusercontent.com/yda-r02-gm-17/Mario/master/res/img/" + name + "?" + new Date().getTime();
 }
 
 function OutputConsole()

@@ -6,6 +6,18 @@ const DataName =
   SHINE_SPRITE: "shine-sprite"
 }
 
+var images =
+[
+  PlayerImg.IDLE_R,
+  PlayerImg.IDLE_L,
+  PlayerImg.WALK_1_R,
+  PlayerImg.WALK_1_L,
+  PlayerImg.WALK_2_R,
+  PlayerImg.WALK_2_L,
+  PlayerImg.JUMP_R,
+  PlayerImg.JUMP_L
+]
+
 class Data
 {
   constructor()
@@ -16,9 +28,9 @@ class Data
     this.shine_sprite = 0; /* データ追加場所 */
   }
 
-  static LOAD()
+  static LOAD() /* ページ読み込みで1回だけ実行 */
   {
-    if (!Data.get(DataName.WELCOME))
+    if (!Data.get(DataName.WELCOME)) /* 初めてのページ読み込みでCookie初期化 */
     {
       this.save(DataName.WELCOME, true);
       this.save(DataName.ALL_COIN, 0);
@@ -26,14 +38,16 @@ class Data
       this.save(DataName.SHINE_SPRITE, 0); /* データ追加場所 */
     }
 
+    /* JSに書き込み */
     this.welcome = this.get(DataName.WELCOME);
     this.all_coin = this.get(DataName.ALL_COIN);
     this.star_coin = this.get(DataName.STAR_COIN);
     this.shine_sprite = this.get(DataName.SHINE_SPRITE); /* データ追加場所 */
   }
 
-  static UPDATE() /* Cookie操作によるチート行為防止 */
+  static UPDATE() /* 常に実行される */ /* Cookie操作によるチート行為防止 */
   {
+    /* 書き込まれたデータからCookieに反映 */
     this.save(DataName.WELCOME, this.welcome);
     this.save(DataName.ALL_COIN, this.all_coin);
     this.save(DataName.STAR_COIN, this.star_coin);
@@ -47,7 +61,7 @@ class Data
 
   static save(name, value)
   {
-    document.cookie = name + '=' + value + ';max-age=315360000';
+    document.cookie = name + '=' + value + ';max-age=315360000' /* 10年 */;
   }
 
   static get(name)

@@ -1,19 +1,19 @@
 const PlayerImg =
 {
-  IDLE_R : getResourceImage("player/right/idle.png"),
-  IDLE_L : getResourceImage("player/left/idle.png"),
+  IDLE_R : getImageFromGitHub("player/right/idle.png"),
+  IDLE_L : getImageFromGitHub("player/left/idle.png"),
 
-  WALK_1_R : getResourceImage("player/right/walk_1.png"),
-  WALK_1_L : getResourceImage("player/left/walk_1.png"),
+  WALK_1_R : getImageFromGitHub("player/right/walk_1.png"),
+  WALK_1_L : getImageFromGitHub("player/left/walk_1.png"),
 
-  WALK_2_R : getResourceImage("player/right/walk_2.png"),
-  WALK_2_L : getResourceImage("player/left/walk_2.png"),
+  WALK_2_R : getImageFromGitHub("player/right/walk_2.png"),
+  WALK_2_L : getImageFromGitHub("player/left/walk_2.png"),
 
-  DASH_R : getResourceImage("player/right/dash.png"),
-  DASH_L : getResourceImage("player/left/dash.png"),
+  DASH_R : getImageFromGitHub("player/right/dash.png"),
+  DASH_L : getImageFromGitHub("player/left/dash.png"),
 
-  JUMP_R : getResourceImage("player/right/jump.png"),
-  JUMP_L : getResourceImage("player/left/jump.png")
+  JUMP_R : getImageFromGitHub("player/right/jump.png"),
+  JUMP_L : getImageFromGitHub("player/left/jump.png")
 }
 
 const PlayerSpeed =
@@ -21,8 +21,6 @@ const PlayerSpeed =
   WALK : 5 + 5 / 2,
   DASH : 20
 }
-
-var pImg;
 
 class Player
 {
