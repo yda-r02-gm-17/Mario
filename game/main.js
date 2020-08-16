@@ -111,6 +111,7 @@ function OutputConsole()
   Console.addText("Player | #collision_side = " + p.collision_side);
   Console.addText("Player | #collision_top = " + p.collision_top);
   Console.addText("Player | #isGrounded = " + p.isGrounded);
+  Console.addText("Player | #jump = " + p.jump);
   Console.addText("Player | #jumping = " + p.jumping);
   Console.addText("Player | #jumpCounter = " + p.jumpCounter);
   Console.addText("Player | #face = " + (p.face == 'r' ? "r:Right" : "l:Left"));

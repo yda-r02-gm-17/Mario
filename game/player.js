@@ -79,7 +79,7 @@ class Player
 
     if (this.collision_top)
     {
-      this.y = this.jump ? this.y += this.jumpHigh : this.y;
+      this.y = this.jump ? this.y += this.jumpHigh * 2.5 : this.y;
     }
 
     if (!this.isGrounded) /* 自動落下 */
