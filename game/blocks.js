@@ -1,7 +1,7 @@
 const BlockType =
 {
-  GRASS : getResourceImage("block/grass.png"),
-  DIRT : getResourceImage("block/dirt.png")
+  GRASS : getResourceImage("block/grass_mc_.png"),
+  DIRT : getResourceImage("block/dirt_mc_.png")
 }
 
 var blockImg;

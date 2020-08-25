@@ -3,6 +3,26 @@
 
   <head>
     <meta charset="utf-8">
+    <style>
+      h1
+      {
+        font-size: 48px;
+        color: red;
+        text-align: center;
+        margin: 0px 0 0px 0;
+      }
+      #console
+      {
+        position: fixed;
+        font-size: 18px;
+        font-family: 'Minecraft';
+      }
+      #canvas
+      {
+        background: skyblue;
+        border: solid 5px black;
+      }
+    </style>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="background.js"></script>
     <script type="text/javascript" src="player.js"></script>
@@ -12,10 +32,10 @@
   </head>
 
   <body onload="init()" style="">
-    <h1 style="font-size: 48px; color: red; text-align: center; margin: 0px 0 0px 0;">スーパーマリオ?ゲーム</h1>
-    <p id="console" style="position: fixed; font-size: 18px; font-family: 'Minecraft';"></p>
+    <h1>スーパーマリオ?ゲーム</h1>
+    <p id="console"></p>
     <div style="text-align: center;">
-      <canvas id="canvas" style="background: skyblue; border: solid 5px black;"></canvas>
+      <canvas id="canvas"></canvas>
     </div>
   </body>
 

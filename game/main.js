@@ -47,7 +47,7 @@ function GRASS_MAP()
       Block.place(BlockType.GRASS, i * 80, SCREEN_HEIGHT - blockSize * 2, blockSize, blockSize);
   }
 
-  Block.place(BlockType.GRASS, blockSize * 15, SCREEN_HEIGHT - 80 * 3, blockSize, blockSize);
+  Block.place(BlockType.DIRT, blockSize * 15, SCREEN_HEIGHT - 80 * 3, blockSize, blockSize);
   Block.place(BlockType.GRASS, blockSize * 15, SCREEN_HEIGHT - 80 * 4, blockSize, blockSize);
   Block.place(BlockType.GRASS, blockSize * 15, SCREEN_HEIGHT - 80 * 4, blockSize, blockSize);
   Block.place(BlockType.GRASS, blockSize * 14, SCREEN_HEIGHT - 80 * 4, blockSize, blockSize);
