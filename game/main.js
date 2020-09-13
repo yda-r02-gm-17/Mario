@@ -150,6 +150,4 @@ function readTextFile(file)
   {
     alert(req.responseText);
   }
-
-  alert(1);
 }
