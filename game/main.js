@@ -34,7 +34,7 @@ function init()
   window.addEventListener('keydown', onKeyDown);
   window.addEventListener('keyup', onKeyUp);
 
-  readTextFile("map.csv");
+  getCSV("map.csv");
 
   timer = setInterval(display, 1000 / FPS);
 }
@@ -140,7 +140,7 @@ class Console
   }
 }
 
-function readTextFile(file)
+function getCSV(file)
 {
   var req = new XMLHttpRequest();
   req.open("GET", file, false);
