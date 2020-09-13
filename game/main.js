@@ -149,5 +149,6 @@ function getCSV(file)
   req.onload = function()
   {
     console.log(req.responseText);
+    alert(1);
   }
 }
