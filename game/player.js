@@ -36,6 +36,7 @@ class Player
     this.moveRight = false;
     this.moveLeft = false;
     this.face = 'r';
+    this.jumpKeyState = 0;
     this.jump = false; /* Jump Key Pressed -> true */
     this.jumping = false; /* While Player Jumping -> true */
 
@@ -74,7 +75,7 @@ class Player
     if (this.collision_side) /* ブロックにぶつかった時 */
     {
       this.x = this.moveRight ? this.x -= this.speed : this.x; /* 右に壁 */
-      this.x = this.moveLeft ? this.x += this.speed : this.x; /* ひらりに壁 */
+      this.x = this.moveLeft ? this.x += this.speed : this.x;  /* 左に壁 */
     }
 
     if (this.collision_top)

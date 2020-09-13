@@ -5,8 +5,9 @@ const BlockType =
 }
 
 var blockImg;
-var blockSize = 80;
+var blockSize = 60;
 
+/* 普通のブロック */
 class Block
 {
   static place(type, x, y, w, h)
@@ -25,7 +26,7 @@ class Block
 
     if (p.x + p.w / 10 <= x + w - 1 && p.x + p.w - p.w / 10 >= x + 1)
     { /* 下面での衝突だけ */
-      if (p.y - 1 <= y + h && p.y >= y) /**************** 修正 **************/
+      if (p.y - 1 <= y + h && p.y >= y)
       {
         p.collision_top = true;
       }
@@ -33,7 +34,7 @@ class Block
 
     if (p.x + p.w / 10 <= x + w - 1 && p.x + p.w - p.w / 10 >= x + 1)
     { /* 上面での衝突だけ */
-      if (p.y + p.h + 1 >= y && p.y + p.h + 1 <= y + 10) /**************** 修正 **************/
+      if (p.y + p.h + 1 >= y && p.y + p.h + 1 <= y + 10)
       {
         p.isGrounded = true;
       }
@@ -41,6 +42,7 @@ class Block
   }
 }
 
+/* 当たり判定無しブロック */
 class nBlock
 {
 }

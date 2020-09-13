@@ -34,6 +34,8 @@ function init()
   window.addEventListener('keydown', onKeyDown);
   window.addEventListener('keyup', onKeyUp);
 
+  readTextFile("map.csv");
+
   timer = setInterval(display, 1000 / FPS);
 }
 
@@ -41,16 +43,16 @@ function GRASS_MAP()
 {
   for (var i = 0; i < 20; i++)
   {
-    Block.place(BlockType.DIRT, i * 80, SCREEN_HEIGHT - blockSize, blockSize, blockSize);
+    Block.place(BlockType.DIRT, i * 60, SCREEN_HEIGHT - blockSize, blockSize, blockSize);
 
     if (i != 5)
-      Block.place(BlockType.GRASS, i * 80, SCREEN_HEIGHT - blockSize * 2, blockSize, blockSize);
+      Block.place(BlockType.GRASS, i * 60, SCREEN_HEIGHT - blockSize * 2, blockSize, blockSize);
   }
 
-  Block.place(BlockType.DIRT, blockSize * 15, SCREEN_HEIGHT - 80 * 3, blockSize, blockSize);
-  Block.place(BlockType.GRASS, blockSize * 15, SCREEN_HEIGHT - 80 * 4, blockSize, blockSize);
-  Block.place(BlockType.GRASS, blockSize * 15, SCREEN_HEIGHT - 80 * 4, blockSize, blockSize);
-  Block.place(BlockType.GRASS, blockSize * 14, SCREEN_HEIGHT - 80 * 4, blockSize, blockSize);
+  Block.place(BlockType.DIRT, blockSize * 15, SCREEN_HEIGHT - 60 * 3, blockSize, blockSize);
+  Block.place(BlockType.GRASS, blockSize * 15, SCREEN_HEIGHT - 60 * 4, blockSize, blockSize);
+  Block.place(BlockType.GRASS, blockSize * 15, SCREEN_HEIGHT - 60 * 4, blockSize, blockSize);
+  Block.place(BlockType.GRASS, blockSize * 14, SCREEN_HEIGHT - 60 * 4, blockSize, blockSize);
 }
 
 function display()
@@ -135,5 +137,17 @@ class Console
   {
     document.getElementById('console').innerHTML = "Console Log:</br></br>" + this.text;
     this.text = "";
+  }
+}
+
+function readTextFile(file)
+{
+  var req = new XMLHttpRequest();
+  req.open("GET", file, false);
+  req.send();
+
+  req.onload = function()
+  {
+    alert(req.responseText);
   }
 }
