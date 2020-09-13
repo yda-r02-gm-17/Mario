@@ -148,8 +148,6 @@ function readTextFile(file)
 
   req.onload = function()
   {
-    alert(req.responseText);
+    console.log(req.responseText);
   }
-
-  alert(1);
 }
